@@ -1,0 +1,7 @@
+.container
+{align-items: flex-start}
+
+.fil
+{align-items: flex-end;
+    display:flex;
+    flex-direction:row;}

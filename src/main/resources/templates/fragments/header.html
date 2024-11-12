@@ -1,0 +1,40 @@
+<header class="p-3 mb-3 border-bottom" xmlns:display="http://www.w3.org/1999/xhtml"
+        xmlns:flex-direction="http://www.w3.org/1999/xhtml">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li class="nav-item"><a href="#" th:href="@{/notes}" class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="#" th:href="@{/tasks}" class="nav-link px-2 link-secondary">Tasks</a></li>
+                <li><a href="#" th:href="@{/events}" class="nav-link px-2 link-body-emphasis">Events</a></li>
+                <li><a href="#" th:href="@{/appointments}" class="nav-link px-2 link-body-emphasis">Appointments</a></li>
+                <div class="dropdown">
+                    <a href="#" class="d-flex  align-items-center col-lg-auto mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="1" height="45" ><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" style="">
+                        <li align="center"><a class="dropdown-item active" href="#" th:href="@{/notes}" aria-current="page">All</a></li>
+                        <li align="center"><a class="dropdown-item" href="#" th:href="@{/in_progress}">In progress</a></li>
+                        <li align="center"><a class="dropdown-item" href="#" th:href="@{/cancelled}">Cancelled</a></li>
+                        <li align="center"><a class="dropdown-item" href="#" th:href="@{/completed}">Completed</a></li>
+                        <li align="center"><a class="dropdown-item" href="#" th:href="@{/moved}">Moved</a></li>
+                        <li align="center"><hr class="dropdown-divider"></li>
+                        <li align="center"><a class="dropdown-item" href="#" th:href="@{/important}">Important</a></li>
+                        <li align="center"><a class="dropdown-item" href="#" th:href="@{/not_important}">Not important</a></li>
+                    </ul>
+                </div>
+            </ul>
+
+
+            <form class="input-group"  th:action="@{/search}" method="get" widght="90">
+                <input type="text" class="form-control " placeholder="Search..." name="keyword"  th:value="${keyword}">
+                <span class="input-group-btn">  <button type="submit" class="btn btn-info" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg></button></span>
+            </form>
+
+        </div>
+    </div>
+</header>
